@@ -19,9 +19,10 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$data['Content']='Writer/WriteArticleWriter';
+	{ 
+		//edited by Khadija
+		$data['Content']='Main/Landing';
 		
-		$this->load->view('SharedLayouts/DashboardWriter',$data);
+		$this->load->view('SharedLayouts/Main',$data);
 	}
 }
