@@ -74,11 +74,7 @@
     function log() {
       var ans = window.confirm("By clicking OK you will be logged out");
       if (ans == true) {
-<<<<<<< HEAD
         window.location.href = "<?php echo site_url("User/SignOut"); ?>";
-=======
-        window.location.href = "<?php echo site_url("Account/SignOut"); ?>";
->>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
       }
     };
   </script>
@@ -156,12 +152,7 @@
                 <span class="navList__subheading-title">Feedbacks</span>
               </div>
               <ul class="subList subList--hidden">
-<<<<<<< HEAD
-                <li class="subList__item"><a href="FeedbackpagePatient.aspx" style="color:white;">Psychologists</a></li>
-
-=======
                 <li class="subList__item"><a href="<?php echo site_url("Feedback/sendFeedback"); ?>" style="color:white;">Psychologists</a></li>
->>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
                 <li class="subList__item">Writer</li>
               </ul>
             </li>
@@ -177,12 +168,7 @@
             <li>
               <div class="navList__subheading row row--align-v-center">
                 <span class="navList__subheading-icon"><i class="fas fa-eye"></i></span>
-<<<<<<< HEAD
                   </div>
-=======
-                <span class="navList__subheading-title"><a href="#" style="color:white;">Chat</a></span>
-              </div>
->>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
 
             </li>
             <li>
@@ -206,20 +192,12 @@
               </div>
               <ul class="subList subList--hidden">
                 <li class="subList__item"><a href="#" style="color:white;" onclick="na()">Read Article</a></li>
-<<<<<<< HEAD
                 <li class="subList__item"><a href="<?php echo site_url("Patient/WriteArticle"); ?> style="color:white;">Write Article</a></li>
-=======
-                <li class="subList__item"><a href="<?php echo site_url("Main/Writer/WriteArticleWriter"); ?>" style="color:white;">Write Article</a></li>
->>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
               </ul>
             </li>
 
 
-<<<<<<< HEAD
-            <li class="navList__heading">Feeback<i class="fas fa-chart-bar"></i></li>
-=======
             <li class="navList__heading">Feedback<i class="fas fa-chart-bar"></i></li>
->>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
             <li>
               <div class="navList__subheading row row--align-v-center">
                 <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>

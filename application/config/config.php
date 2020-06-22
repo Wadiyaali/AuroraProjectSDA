@@ -23,11 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-<<<<<<< HEAD
 $config['base_url'] = 'http://localhost/AuroraProjectSDA-master';
-=======
-$config['base_url'] = 'http://localhost/sdaproject/';
->>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
 
 /*
 |--------------------------------------------------------------------------
