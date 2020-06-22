@@ -168,7 +168,7 @@
             <li>
               <div class="navList__subheading row row--align-v-center">
                 <span class="navList__subheading-icon"><i class="fas fa-eye"></i></span>
-                <span class="navList__subheading-title"><a href="Chat.aspx" style="color:white;">Chat</a></span>
+                <span class="navList__subheading-title"><a href="#" style="color:white;">Chat</a></span>
               </div>
 
             </li>
@@ -193,12 +193,12 @@
               </div>
               <ul class="subList subList--hidden">
                 <li class="subList__item"><a href="#" style="color:white;" onclick="na()">Read Article</a></li>
-                <li class="subList__item"><a href="Writearticlepatient.aspx" style="color:white;">Write Article</a></li>
+                <li class="subList__item"><a href="<?php echo site_url("Main/Writer/WriteArticleWriter"); ?>" style="color:white;">Write Article</a></li>
               </ul>
             </li>
 
 
-            <li class="navList__heading">Feeback<i class="fas fa-chart-bar"></i></li>
+            <li class="navList__heading">Feedback<i class="fas fa-chart-bar"></i></li>
             <li>
               <div class="navList__subheading row row--align-v-center">
                 <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>
