@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DashboardPsychologist.Master.cs" Inherits="webmaster.psychologistmaster" %>
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
 
 <!DOCTYPE html>
 
@@ -167,7 +171,11 @@
         <li>
           <div class="navList__subheading row row--align-v-center">
             <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>
+<<<<<<< HEAD
             <span class="navList__subheading-title"><a href="Feedbackpsycho.aspx" style="color:white;">Review us</a></span>
+=======
+            <span class="navList__subheading-title"><a href="<?php echo site_url("Feedback/sendFeedback"); ?>" style="color:white;">Review us</a></span>
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
           </div>
          
         </li>

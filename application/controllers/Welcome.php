@@ -20,6 +20,13 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{ 
+<<<<<<< HEAD
 	
+=======
+		//edited by Khadija
+		$data['Content']='Main/Landing';
+		
+		$this->load->view('SharedLayouts/Main',$data);
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
 	}
 }

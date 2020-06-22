@@ -6,7 +6,11 @@ class Patient extends CI_Controller
     {
         parent::__construct();
         if (!$this->session->userdata('LoggedIn')) {
+<<<<<<< HEAD
             redirect("User/SignIn");
+=======
+            redirect("Account/SignIn");
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
         } else {
             if ($this->session->userdata('Role') != "Patient") {
                 show_error('You can\'t access the requested page', 403, '403');
@@ -14,6 +18,7 @@ class Patient extends CI_Controller
             }
         }
         $this->load->model('Patient_Model');
+<<<<<<< HEAD
         $this->load->model('Article_Model');
     }
 
@@ -47,6 +52,10 @@ class Patient extends CI_Controller
             }
         }
     }
+=======
+    }
+
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
     public function Index()
     {
         $data['Content'] = "Patient/HomepagePat";

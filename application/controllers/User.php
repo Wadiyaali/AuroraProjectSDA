@@ -14,7 +14,11 @@ class User extends CI_Controller
 
     public function SignIn()
     {
+<<<<<<< HEAD
         $this->form_validation->set_rules('txtEmail', 'Email', 'required|trim|min_length[1]|xss_clean');
+=======
+        $this->form_validation->set_rules('txtSessionDate', 'Session Date', 'required|trim|min_length[1]|xss_clean');
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
         $this->form_validation->set_rules('txtPassword', 'Password', 'required|trim|min_length[3]');
         if ($this->form_validation->run() == FALSE) {
             $data['Content'] = "Main/UserLogin";

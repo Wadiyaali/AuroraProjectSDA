@@ -115,7 +115,11 @@
            <li>
           <div class="navList__subheading row row--align-v-center">
             <span class="navList__subheading-icon"><i class="fas fa-briefcase-medical"></i></span>
+<<<<<<< HEAD
        <a style="color:white;" href=""><span class="navList__subheading-title">Home</span></a>
+=======
+       <a style="color:white;" href="HomepageWriter.aspx"><span class="navList__subheading-title">Home</span></a>
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
           </div>
          
         </li>
@@ -142,7 +146,11 @@
           </div>
           <ul class="subList subList--hidden">
             <li class="subList__item"><a href="#" style="color:white;" onclick="na()">Read Article</a></li>
+<<<<<<< HEAD
             <li class="subList__item"><a href="<?php echo site_url("Writer/WriteArticle"); ?>" style="color:white;">Write Article</a></li>
+=======
+            <li class="subList__item"><a href="Writearticlewriter.aspx" style="color:white;">Write Article</a></li>
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
           </ul>
         </li>
        
@@ -152,7 +160,11 @@
         <li>
           <div class="navList__subheading row row--align-v-center">
             <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>
+<<<<<<< HEAD
             <span class="navList__subheading-title"><a href=<a href="<?php echo site_url("?/?"); ?>" style="color:white;">Review us</a></span>
+=======
+            <span class="navList__subheading-title"><a href="<?php echo site_url("Feedback/sendFeedback"); ?>" style="color:white;">Review us</a></span>
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
           </div>
          
         </li>

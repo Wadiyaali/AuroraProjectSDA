@@ -64,8 +64,13 @@
             <a class="et-hero-tab navbar-nav" href="Articles.aspx"><p>Articles</p></a>
             <a class="et-hero-tab navbar-nav" href="Tests.aspx"><p>Test</p></a>
            
+<<<<<<< HEAD
             <a class="nonlink navbar-text" href="<?php echo site_url("Landing/Index"); ?>" title="Home"><h1 style="font-size:5em">Aurora </h1></a><a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignIn"); ?>"><p>Log In</p></a>
             <a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignUp"); ?>"><p>Sign up</p> </a>
+=======
+            <a class="nonlink navbar-text" href="Mainpage.aspx" title="Home"><h1 style="font-size:5em">Aurora </h1></a><a class="et-hero-tab navbar-nav" href="LoginPage.aspx"><p>Log In</p></a>
+            <a class="et-hero-tab navbar-nav" href="Signuppage.aspx"><p>Sign up</p> </a>
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
         
            
             <a class="nonlink"></a>
