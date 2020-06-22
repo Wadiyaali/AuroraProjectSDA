@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Landing extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,13 +20,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{ 
-<<<<<<< HEAD
-	
-=======
 		//edited by Khadija
-		$data['Content']='Main/Landing';
-		
-		$this->load->view('SharedLayouts/Main',$data);
->>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
+		$data['Content']='Main/Feedbackpage';
+        $data['Title']='Patient/HomepagePat';
+		$this->load->view('SharedLayouts/DashboardPatient',$data);
 	}
 }

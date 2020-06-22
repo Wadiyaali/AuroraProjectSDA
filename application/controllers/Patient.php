@@ -14,8 +14,39 @@ class Patient extends CI_Controller
             }
         }
         $this->load->model('Patient_Model');
+        $this->load->model('Article_Model');
     }
 
+    public function WriteArticle()
+    {
+        $this->form_validation->set_rules('txtArticleTitlePat', 'Article Title', 'required|trim|min_length[1]|xss_clean');
+         $this->form_validation->set_rules('txtArticleContentPat', 'Article Content', 'required|trim|min_length[1]|xss_clean');
+
+        if ($this->form_validation->run() == FALSE) {
+            $data['Content'] = "Patient/WriteArticlePatient";
+            $data['Title'] = "Write Article";
+           
+            $this->load->view('SharedLayouts/DashboardPatient', $data);
+        } else {
+            $array = array(
+                'UID' => $this->session->userdata('UID'),
+                'Name' => $this->input->post('txtArticleTitlePat'),
+                'Content' => $this->input->post('txtArticleContentPat'),
+                
+            );
+
+            if ($this->Article_Model->addArticle($array) > 0) {
+                $this->session->set_flashdata('createASuccess', 'Your Article has been added!');
+                redirect("Patient/WriteArticle");
+            } else {
+                $this->session->set_flashdata('createAError', 'An Error Occured!');
+                $data['Content'] = "Patient/WriteArticlePatient";
+                $data['Title'] = "WriteArticle";
+               
+                $this->load->view('SharedLayouts/DashboardPatient', $data);
+            }
+        }
+    }
     public function Index()
     {
         $data['Content'] = "Patient/HomepagePat";

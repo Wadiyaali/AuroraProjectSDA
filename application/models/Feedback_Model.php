@@ -10,6 +10,10 @@ class Feedback_Model extends CI_Model
             'UID'=>$userID
         );
         $added=$this->db->insert('feedback',$data);
+<<<<<<< HEAD
+        return $added;
+    }
+=======
         if($added->num_rows()>0)
         {
             return true;
@@ -19,4 +23,5 @@ class Feedback_Model extends CI_Model
             return false;
         }    
 }
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
 }

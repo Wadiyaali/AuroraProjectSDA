@@ -26,6 +26,10 @@
                         'class'=>'form-control col-md-9 col-lg-9 light-text',
                         'id'=>'txtArticleTitlePat',
                         'name'=>'txtArticleTitlePat',
+<<<<<<< HEAD
+                        'value' => set_value('txtArticleTitlePat'),
+=======
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
                          );
                     echo form_input($data);
                     ?></p></div>
@@ -44,6 +48,10 @@
                         'rows'=>8,
                         'placehpolder'=>'Add content here...',
                         'cols'=>50,
+<<<<<<< HEAD
+                        'value' => set_value('txtArticleContentPat'),
+=======
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
                         'maxlength'=>2000,
                          );
                     echo form_textarea($data);
@@ -65,5 +73,15 @@
 
 <?php echo form_close(); ?> 
     </div>
+<<<<<<< HEAD
+    <?php if ($this->session->flashdata('createASuccess')) : ?>
+            <p class="alert alert-success"><?php echo $this->session->flashdata('createSuccess'); ?> </p>
+        <?php endif; ?>
+
+        <?php if ($this->session->flashdata('createAError')) : ?>
+            <p class="alert alert-danger"><?php echo $this->session->flashdata('createError'); ?> </p>
+        <?php endif; ?>
+=======
       
+>>>>>>> bb4dae05fc99bf32988c35fe2c7b1a9a6c886b97
     </div></div>
