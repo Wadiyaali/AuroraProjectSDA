@@ -152,7 +152,7 @@
         <li>
           <div class="navList__subheading row row--align-v-center">
             <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>
-            <span class="navList__subheading-title"><a href="Feedbackwriter.aspx" style="color:white;">Review us</a></span>
+            <span class="navList__subheading-title"><a href="<?php echo site_url("Feedback/sendFeedback"); ?>" style="color:white;">Review us</a></span>
           </div>
          
         </li>

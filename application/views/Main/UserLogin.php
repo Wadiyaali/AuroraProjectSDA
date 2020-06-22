@@ -93,6 +93,11 @@ echo form_dropdown('Category', $options, 'writer',$data);
          <?php echo validation_errors('<p class="alert alert-danger">'); ?>
             <?php echo form_close(); ?>
         </div>
+        <div>
+        <?php if ($this->session->flashdata('loginError')) : ?>
+            <p class="alert alert-danger"><?php echo $this->session->flashdata('loginError'); ?> </p>
+        <?php endif; ?>
+        </div>
         <div class="col-md-6 col-lg-6">
 <img class="col-md-12" style="margin-top: 8em;" src="https://kidshelpline.com.au/sites/default/files/bdl_image/HEADER_T_MFSWMH.png">
         </div>

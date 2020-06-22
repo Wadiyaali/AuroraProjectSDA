@@ -153,7 +153,6 @@ echo form_label('', '', $attributes);?>
               'ID' => 'btnPatFeedsubmit',
               'Text' => 'Submit',
               'CssClass' => 'btn submit button',
-              'OnClick' => 'btnPatFeedsubmit_Click'
       );
       
       echo form_button($data);

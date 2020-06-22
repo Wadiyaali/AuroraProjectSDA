@@ -8,7 +8,7 @@ class User extends CI_Controller
             $role = $this->session->userdata('Role');
             $this->redirectToDashboard($role);
         } else {
-            redirect("Account/SignIn");
+            redirect("User/SignIn");
         }
     }
 
@@ -23,7 +23,7 @@ class User extends CI_Controller
         } else {
             $email = $this->input->post('txtEmail');
             $pass = $this->input->post('txtPassword');
-            $user = $this->Account_Model->userSignIn($email, $pass);
+            $user = $this->User_Model->userSignIn($email, $pass);
             if (!empty($user)) {
                 $user = $user + array('LoggedIn' => true);
                 $this->session->set_userdata($user);
@@ -31,7 +31,7 @@ class User extends CI_Controller
                 $this->redirectToDashboard($role);
             } else {
                 $this->session->set_flashdata('loginError', 'Invalid email or password. Try again');
-                redirect("Account/SignIn");
+                redirect("User/SignIn");
             }
         }
     }
@@ -40,7 +40,7 @@ class User extends CI_Controller
     {
         $array = array('UID', 'Name', 'Email', 'Role', 'LoggedIn');
         $this->session->unset_userdata($array);
-        redirect("Account/SignIn");
+        redirect("User/SignIn");
     }
 
 
