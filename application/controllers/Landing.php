@@ -21,8 +21,8 @@ class Landing extends CI_Controller {
 	public function index()
 	{ 
 		//edited by Khadija
-		$data['Content']='Main/Feedbackpage';
-        $data['Title']='Patient/HomepagePat';
-		$this->load->view('SharedLayouts/DashboardPatient',$data);
+		$data['Content']='Main/Landing';
+        $data['Title']='Aurora';
+		$this->load->view('SharedLayouts/Main',$data);
 	}
 }
