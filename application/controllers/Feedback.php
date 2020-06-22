@@ -7,19 +7,19 @@
         if($this->session->userdate('LoggedIn')==1)    
         {  if (strcmp($this->session->userdata('Role'),"Patient")) 
           {
-              $data['Content'] = "Main/FeedbackPagePatient";
+              $data['Content'] = "Main/FeedbackPage";
               $data['Title'] = "Feedback";
               $this->load->view('SharedLayouts/DashboardPatient', $data);
           }
           else if (strcmp($this->session->userdata('Role'),"Psychologist")) 
           {
-              $data['Content'] = "Main/FeedbackPsycho";
+              $data['Content'] = "Main/FeedbackPage";
               $data['Title'] = "Feedback";
               $this->load->view('SharedLayouts/DashboardPsychologist', $data);
           }
           else if (strcmp($this->session->userdata('Role'),"Writer")) 
           {
-              $data['Content'] = "Main/FeedbackWriter";
+              $data['Content'] = "Main/FeedbackPage";
               $data['Title'] = "Feedback";
               $this->load->view('SharedLayouts/DashboardWriter', $data);
           }
@@ -52,5 +52,3 @@
     }
 
 }
-
-?>
