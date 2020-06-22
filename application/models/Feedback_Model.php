@@ -10,5 +10,6 @@ class Feedback_Model extends CI_Model
             'UID'=>$userID
         );
         $added=$this->db->insert('feedback',$data);
+        return $added;
     }
 }

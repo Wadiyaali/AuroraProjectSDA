@@ -4,7 +4,55 @@ class User extends CI_Controller
 {
     public function Index()
     {
-        redirect('User/Signup');
+        if ($this->session->userdata('LoggedIn')) {
+            $role = $this->session->userdata('Role');
+            $this->redirectToDashboard($role);
+        } else {
+            redirect("Account/SignIn");
+        }
+    }
+
+    public function SignIn()
+    {
+        $this->form_validation->set_rules('txtSessionDate', 'Session Date', 'required|trim|min_length[1]|xss_clean');
+        $this->form_validation->set_rules('txtPassword', 'Password', 'required|trim|min_length[3]');
+        if ($this->form_validation->run() == FALSE) {
+            $data['Content'] = "Main/UserLogin";
+            $data['Title'] = "Sign in";
+            $this->load->view("SharedLayouts/Main", $data);
+        } else {
+            $email = $this->input->post('txtEmail');
+            $pass = $this->input->post('txtPassword');
+            $user = $this->Account_Model->userSignIn($email, $pass);
+            if (!empty($user)) {
+                $user = $user + array('LoggedIn' => true);
+                $this->session->set_userdata($user);
+                $role = $this->session->userdata('Role');
+                $this->redirectToDashboard($role);
+            } else {
+                $this->session->set_flashdata('loginError', 'Invalid email or password. Try again');
+                redirect("Account/SignIn");
+            }
+        }
+    }
+
+    public function SignOut()
+    {
+        $array = array('UID', 'Name', 'Email', 'Role', 'LoggedIn');
+        $this->session->unset_userdata($array);
+        redirect("Account/SignIn");
+    }
+
+
+    private function redirectToDashboard($role)
+    {
+        if ($role == "Patient") {
+            redirect("Patient/Index");
+        } else if ($role == "Writer") {
+            redirect("Writer/Index");
+        } else if ($role == "Psychologist") {
+            redirect("Psychologist/Index");
+        }
     }
     public function Signup()
     {
@@ -12,10 +60,13 @@ class User extends CI_Controller
         $this->form_validation->set_rules('txtEmail', 'Email address', 'required|trim|min_length[3]|max_length[30]|xss_clean|valid_email');
         $this->form_validation->set_rules('txtPassword', 'Password', 'required|trim|min_length[3]');
         $this->form_validation->set_rules('txtCPassword', 'Confirm Password', 'required|trim|min_length[3]');
-        if ($this->form_validation->run() == FALSE) {
+        if ($this->form_validation->run() == FALSE) //if input not validated, reload signup page
+        {
             $data['Content'] = 'Main/UserSignup';
             $this->load->view('SharedLayouts/Main', $data);
-        } else {
+        } 
+        else //get the data posted on form and send it to the model method
+        {
             $name = $this->input->post('txtName');
             $email = $this->input->post('txtEmail');
             $pass = $this->input->post('txtPassword');
@@ -28,47 +79,15 @@ class User extends CI_Controller
                     'Password' => $pass,
                     'Category' => $cat
                 );
-                $q = $this->User_Model->Signup($dt);
-                if ($q) {
+                $q = $this->User_Model->Signup($dt); //model method returns a row of user
+                if ($q) // if the user is not null, it exists
+                {
                     $this->session->set_flashdata('padd', 'User added successfully');
-                    $data['Content'] = 'Main/UserLogin';
+                    $data['Content'] = 'Main/UserLogin';  //move to the login page now
                     $this->load->view('SharedLayouts/Main', $data);
                 } else {
-                    redirect('User/Signup');
+                    redirect('User/Signup'); //reload the page if sign up failed controller/method
                 }
-            }
-        }
-    }
-    public function Signin()
-    {
-        $this->form_validation->set_rules('txtEmail', 'Email address', 'required|trim|min_length[3]|max_length[30]|xss_clean|valid_email');
-        $this->form_validation->set_rules('txtPassword', 'Password', 'required|trim|min_length[3]');
-        if ($this->form_validation->run() == FALSE) {
-            $data['Content'] = 'Main/UserLogin';
-            $this->load->view('SharedLayouts/Main', $data);
-        } else {
-            $email = $this->input->post('txtEmail');
-            $pass = $this->input->post('txtPassword');
-            $cat = $this->input->post('Category');
-            $dt = array(
-                'Email' => $email,
-                'Password' => $pass,
-                'Category' => $cat
-            );
-
-            if ($this->User_Model->Signin($dt)) {
-                $data['User'] = $this->User_Model->Signin($dt);
-                if (strcmp($cat, 'Writer')) {
-                    $data['Content'] = 'Writer/HomepageWriter';
-                    $this->load->view('SharedLayouts/DashboardWriter', $data);
-                }
-                else  if (strcmp($cat, 'Psychologist')) {
-                    $data['Content'] = 'Psychologists/HomepagePsy';
-                    $this->load->view('SharedLayouts/DashboardPsychologist', $data);
-                }
-                
-            } else {
-                redirect('User/Signin');
             }
         }
     }
