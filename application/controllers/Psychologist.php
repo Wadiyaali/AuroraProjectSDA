@@ -13,13 +13,11 @@ class Psychologist extends CI_Controller
                 die();
             }
         }
-       
         $this->load->model('Article_Model');
         $this->load->model('Psy_Model');
     }
 public function ShowSessions()
 {
-    
     $data['Content'] = "Patient/SessionsHistory";
     $data['Title'] = "My Session Bookings";
     $data['Sessions'] = $this->Patient_Model->GetUserSessionHistory($this->session->userdata('UID'));
@@ -30,19 +28,18 @@ public function ShowSessions()
     {
        
         $this->form_validation->set_rules('txtArticleTitlePsy', 'Article Title', 'required|trim|min_length[1]|xss_clean');
-         $this->form_validation->set_rules('txtArticleContentPsy', 'Article Content', 'required|trim|min_length[1]|xss_clean');
+         $this->form_validation->set_rules('txtArticleContentPsy', 'Article Content', 'required|trim|min_length[100]|xss_clean');
 
         if ($this->form_validation->run() == FALSE) {
             $data['Content'] = "Psychologists/WriteArticlePsychologist";
-            $data['Title'] = "Write Article";
-           
+            $data['Title'] = "Write Article";           
             $this->load->view('SharedLayouts/DashboardPsychologist', $data);
-        } else {
+        } 
+        else {
             $array = array(
                 'UID' => $this->session->userdata('UID'),
                 'Name' => $this->input->post('txtArticleTitlePsy'),
                 'Content' => $this->input->post('txtArticleContentPsy'),
-                
             );
 
             if ($this->Article_Model->addArticle($array) > 0) {
@@ -52,7 +49,6 @@ public function ShowSessions()
                 $this->session->set_flashdata('createAError', 'An Error Occured!');
                 $data['Content'] = "Psychologists/WriteArticlePsychologist";
                 $data['Title'] = "Write Article";
-               
                 $this->load->view('SharedLayouts/DashboardPsychologist', $data);
             }
         }

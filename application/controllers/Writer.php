@@ -21,7 +21,7 @@ class Writer extends CI_Controller
     {
        
         $this->form_validation->set_rules('txtArticleTitleWri', 'Article Title', 'required|trim|min_length[1]|xss_clean');
-         $this->form_validation->set_rules('txtArticleContentWri', 'Article Content', 'required|trim|min_length[1]|xss_clean');
+         $this->form_validation->set_rules('txtArticleContentWri', 'Article Content', 'required|trim|min_length[100]|xss_clean');
 
         if ($this->form_validation->run() == FALSE) {
             $data['Content'] = "Writer/WriteArticleWriter";

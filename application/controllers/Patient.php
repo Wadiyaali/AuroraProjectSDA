@@ -20,7 +20,7 @@ class Patient extends CI_Controller
     public function WriteArticle()
     {
         $this->form_validation->set_rules('txtArticleTitlePat', 'Article Title', 'required|trim|min_length[1]|xss_clean');
-         $this->form_validation->set_rules('txtArticleContentPat', 'Article Content', 'required|trim|min_length[1]|xss_clean');
+         $this->form_validation->set_rules('txtArticleContentPat', 'Article Content', 'required|trim|min_length[100]|xss_clean');
 
         if ($this->form_validation->run() == FALSE) {
             $data['Content'] = "Patient/WriteArticlePatient";
