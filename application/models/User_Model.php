@@ -2,9 +2,19 @@
 class User_Model extends CI_Model{
     public function Signup($data)
     {
-        $q=$this->db->insert('users',$data);
-        return $q;
+        $this->db->where('Email',$data['Email']);
+        $q=$this->db->get('users');
+        if($q->num_rows()>0){
+            return 0;
+        }
+        else{
+            $q=$this->db->insert('users',$data);
+            return $q;
+        }
+        
     }
+
+
     // public function Signin($data)
     // {
     //     //$this->db->select('Name,Email');
@@ -29,7 +39,7 @@ class User_Model extends CI_Model{
             'Password' => $password
         );
         $this->db->where($w);
-        $q = $this->db->get('Users');
+        $q = $this->db->get('users');
         if ($q->num_rows() > 0) {
             return $q->row_array();
         }

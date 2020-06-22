@@ -80,7 +80,7 @@ class User extends CI_Controller
                     'Category' => $cat
                 );
                 $q = $this->User_Model->Signup($dt); //model method returns a row of user
-                if ($q) // if the user is not null, it exists
+                if ($q) // if the user is not null, it was added
                 {
                     $this->session->set_flashdata('padd', 'User added successfully');
                     $data['Content'] = 'Main/UserLogin';  //move to the login page now
