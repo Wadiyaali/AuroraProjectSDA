@@ -1,5 +1,4 @@
- 
-    <div class="article">
+ <div class="article">
         <header class="header new-article">
             <div class="content-wrap">
                 <h2 class="title-page vert-align" style="font-family:Century Gothic;">New Post</h2>    

@@ -1,6 +1,6 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-<script type="text/javascript" language="javascript">
+<!-- <script type="text/javascript" language="javascript">
     window.history.forward();
 
     function DisableBackButton() {
@@ -14,11 +14,8 @@
     window.onunload = function() {
         void(0)
     }
-</script>
+</script> -->
 <div class="container login-form" style="background:#008c76; margin-top:10em;padding:2em;">
-
-
-
     <div class="col-md-6 col-lg-6" style="padding:5em;">
         <?php echo form_open(''); ?>
         <h1 class="text-white" style="font-family: Century Gothic;">
@@ -38,9 +35,7 @@
                 'required' => true
             );
             echo form_input($data);
-            ?>
-
-        </div>
+            ?>  </div>
 
         <div class="my-5 form-group group">
 
@@ -56,8 +51,7 @@
             );
             echo form_input($data);
             ?>
-
-        </div>
+ </div>
         <div class="btn btn-sucess col-md-12">
             <?php
             $array = array(

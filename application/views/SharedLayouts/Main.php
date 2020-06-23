@@ -64,7 +64,7 @@
             <a class="et-hero-tab navbar-nav" href="<?php echo site_url("Landing/ShowArticle"); ?>"><p>Articles</p></a>
             <a class="et-hero-tab navbar-nav" href="#"><p>Test</p></a>
            
-            <a class="nonlink navbar-text" href="<?php echo site_url("Landing/Index"); ?>" title="Home"><h1 style="font-size:5em">Aurora </h1></a><a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignIn"); ?>"><p>Log In</p></a>
+            <a class="nonlink navbar-text" href="<?php echo site_url("Landing"); ?>" title="Home"><h1 style="font-size:5em">Aurora </h1></a><a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignIn"); ?>"><p>Log In</p></a>
             <a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignUp"); ?>"><p>Sign up</p> </a>
         
            
@@ -90,12 +90,16 @@
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                            <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by Team Aurora"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+                            <li><a href="#" title="Design and developed by Team Aurora"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
                         </ul>
 
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
-                        </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1809.0585537695151!2d67.15144425810752!3d24.92808017833471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3385adeb3a5db%3A0x424d30b4941075ff!2sGulistan%20e%20Johar%20Block%209%20Gul%20Housing%20Society%20Block%209%20A%20Gulshan-e-Iqbal%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1592936166077!5m2!1sen!2s" width="auto" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                    </div>
+                    
+                    
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <h3>Everyday is a step towards a better future, stay connected to us & help us in building a better society.</h3>
                             <div class="containernoti">

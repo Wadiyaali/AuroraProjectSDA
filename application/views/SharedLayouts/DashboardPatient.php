@@ -2,7 +2,7 @@
 
 <html>
 
-<head runat="server">
+<head  >
   <title><?php echo $Title; ?></title>
 
   <meta charset="utf-8" />
@@ -215,10 +215,10 @@
       </aside>
 
       <main class="main">
-        <div class="main-header">
-          <div class="main-header__intro-wrapper">
+      <div class="main-header" style="background-image:url('https://www.hurtigruten.com/globalassets/global/inspiration/verticals/northern-light/nordlys-norge-hgr-122602-foto_stian__klo.jpg')">
+     <div class="main-header__intro-wrapper">
             <div class="main-header__welcome">
-              <div class="main-header__welcome-title text-light" id="mainhead" runat="server"></div>
+              <div class="main-header__welcome-title text-light" id="mainhead"  ></div>
               <div class="main-header__welcome-subtitle text-light">May life be easy on you!</div>
             </div>
             <div class="quickview__item">

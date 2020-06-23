@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <html>
-<head runat="server">
-    <title></title>
+<head  >
+<title><?php echo $Title; ?></title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -82,7 +82,7 @@
     </div>
     <div class="sidenav__profile">
       <div class="sidenav__profile-avatar"></div>
-      <div class="sidenav__profile-title text-light" id="txtname" runat="server"></div>
+      <div class="sidenav__profile-title text-light" id="txtname"  ></div>
     </div>
     <div class="row row--align-v-center row--align-h-center">
       <ul class="navList">
@@ -195,7 +195,7 @@
    </main>
     </div>
             <footer class="footer">
-    <p><span class="footer__copyright">&copy;</span> 2019 Aurora</p>
+    <p><span class="footer__copyright">&copy;</span> 2020 Aurora</p>
     <p> <a class="footer__signature">Light beyond Darkness</a></p>
   </footer>
 </div>
