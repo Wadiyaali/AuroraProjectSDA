@@ -62,7 +62,7 @@
             
             <a class="nonlink"></a>
             <a class="et-hero-tab navbar-nav" href="<?php echo site_url("Landing/ShowArticle"); ?>"><p>Articles</p></a>
-            <a class="et-hero-tab navbar-nav" href="#"><p>Test</p></a>
+            <a class="et-hero-tab navbar-nav" href="<?php echo site_url("Landing/TestD"); ?>"><p>Test</p></a>
            
             <a class="nonlink navbar-text" href="<?php echo site_url("Landing"); ?>" title="Home"><h1 style="font-size:5em">Aurora </h1></a><a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignIn"); ?>"><p>Log In</p></a>
             <a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignUp"); ?>"><p>Sign up</p> </a>

@@ -82,8 +82,8 @@
     </div>
     <div class="sidenav__profile">
       <div class="sidenav__profile-avatar"></div>
-      <div class="sidenav__profile-title text-light" id="txtname"  ></div>
-    </div>
+      <div class="sidenav__profile-title text-light"><?php echo $this->session->userdata('Name'); ?></div>
+        </div>
     <div class="row row--align-v-center row--align-h-center">
       <ul class="navList">
         <li class="navList__heading">Aurora<i class="far fa-info"></i></li>
@@ -101,7 +101,7 @@
            <li>
           <div class="navList__subheading row row--align-v-center">
             <span class="navList__subheading-icon"><i class="fas fa-briefcase-medical"></i></span>
-       <a style="color:white;" href="<?php echo site_url("Patient/Index"); ?>"><span class="navList__subheading-title">Home</span></a>
+       <a style="color:white;" href="<?php echo site_url("Writer/Index"); ?>"><span class="navList__subheading-title">Home</span></a>
           </div>
          
         </li>
@@ -155,8 +155,8 @@
     <div class="main-header" style="background-image:url('https://www.hurtigruten.com/globalassets/global/inspiration/verticals/northern-light/nordlys-norge-hgr-122602-foto_stian__klo.jpg')">
       <div class="main-header__intro-wrapper">
         <div class="main-header__welcome">
-          <div class="main-header__welcome-title text-light"></div>
-          <div class="main-header__welcome-subtitle text-light">May life be easy on you!</div>
+        <div class="main-header__welcome-title text-light" id="mainhead"  >Welcome back <?php echo ucfirst($this->session->userdata('Name')); ?></div>
+           <div class="main-header__welcome-subtitle text-light">You are spreading knowledge!</div>
         </div>
           <div class="quickview__item">
             <div class="quickview__item-total"></div>

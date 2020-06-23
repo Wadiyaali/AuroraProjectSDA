@@ -35,6 +35,12 @@ class Landing extends CI_Controller {
     $data['articles'] = $this->Article_Model->GetArticle();
     $this->load->view('SharedLayouts/Main', $data);
 }
+public function TestD()
+{$data['Content'] = "Main/TestDirect";
+    $data['Title'] = "Test";
+   
+    $this->load->view('SharedLayouts/Main', $data);
+}
 
 
 }

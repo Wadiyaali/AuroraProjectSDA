@@ -100,8 +100,8 @@
     </div>
     <div class="sidenav__profile">
       <div class="sidenav__profile-avatar"></div>
-       <div class="sidenav__profile-title text-light" id="txtname"  ></div>
-    </div>
+      <div class="sidenav__profile-title text-light"><?php echo $this->session->userdata('Name'); ?></div>
+       </div>
     <div class="row row--align-v-center row--align-h-center">
       <ul class="navList">
         <li class="navList__heading">Aurora<i class="far fa-info"></i></li>
@@ -145,8 +145,7 @@
             </li>
           <li>
           <div class="navList__subheading row row--align-v-center">
-            <span class="navList__subheading-icon"><i class="fas fa-mountain"></i></span>
-              
+            
           </div>
             </li>
         <li class="navList__heading">Articles<i class="far fa-image"></i></li>
@@ -156,8 +155,7 @@
             <span class="navList__subheading-title">Articles</span>
           </div>
           <ul class="subList subList--hidden">
-        <li class="subList__item"><a href="#" style="color:white;" onclick="na()">Read Article</a></li>
-            <li class="subList__item"><a style="color:white;" href="<?php echo site_url("Psychologist/WriteArticle"); ?>" >Write Article</a></li>
+         <li class="subList__item"><a style="color:white;" href="<?php echo site_url("Psychologist/WriteArticle"); ?>" >Write Article</a></li>
           </ul>
         </li>
        
@@ -184,9 +182,8 @@
   <div class="main-header" style="background-image:url('https://www.hurtigruten.com/globalassets/global/inspiration/verticals/northern-light/nordlys-norge-hgr-122602-foto_stian__klo.jpg')">
    <div class="main-header__intro-wrapper">
         <div class="main-header__welcome">
-          
-           <div class="main-header__welcome-title text-light" id="mainhead"  ></div>
-          <div class="main-header__welcome-subtitle text-light">May life be easy on you!</div>
+        <div class="main-header__welcome-title text-light" id="mainhead"  >Welcome back <?php echo ucfirst($this->session->userdata('Name')); ?></div>
+           <div class="main-header__welcome-subtitle text-light">You make lives better!</div>
         </div>
           <div class="quickview__item">
             <div class="quickview__item-total"></div>

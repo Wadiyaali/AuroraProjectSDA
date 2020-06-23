@@ -195,21 +195,15 @@
                 <li class="subList__item"><a href="<?php echo site_url("Patient/WriteArticle"); ?>" style="color:white;">Write Article</a></li>
               </ul>
             </li>
-
-
             <li class="navList__heading">Feedback<i class="fas fa-chart-bar"></i></li>
             <li>
               <div class="navList__subheading row row--align-v-center">
                 <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>
                 <span class="navList__subheading-title">Review us</span>
               </div>
-
             </li>
             <li>
-
             </li>
-
-
           </ul>
         </div>
       </aside>
@@ -218,7 +212,7 @@
       <div class="main-header" style="background-image:url('https://www.hurtigruten.com/globalassets/global/inspiration/verticals/northern-light/nordlys-norge-hgr-122602-foto_stian__klo.jpg')">
      <div class="main-header__intro-wrapper">
             <div class="main-header__welcome">
-              <div class="main-header__welcome-title text-light" id="mainhead"  ></div>
+              <div class="main-header__welcome-title text-light" id="mainhead"  >Welcome back <?php echo ucfirst($this->session->userdata('Name')); ?></div>
               <div class="main-header__welcome-subtitle text-light">May life be easy on you!</div>
             </div>
             <div class="quickview__item">

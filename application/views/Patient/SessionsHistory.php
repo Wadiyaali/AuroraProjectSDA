@@ -1,6 +1,7 @@
 <div class="sess">
     <main role="main">
         <fieldset>
+        <?php if(!empty($Sessions)): ?>
             <?php echo form_open(''); ?>
             <h2 class="text-bold text-capitalize text-dark text-center">My booked sessions</h2>
             <table class="table">
@@ -25,5 +26,9 @@
                     <?php $i++; endforeach; ?>
                 </tbody>
             </table>
+            <?php else: ?>
+                    <h1> No sessions found!</h1>
+                <?php endif;?>
+                </fieldset>
     </main>
 </div>
