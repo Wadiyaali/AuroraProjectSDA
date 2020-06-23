@@ -40,7 +40,6 @@ public function ShowSessions()
             $data['Title'] = "Dashboard"; 
                   
             $this->load->view('SharedLayouts/DashboardPsychologist', $data);
-            
         } 
         else {
               

@@ -11,7 +11,6 @@ class Psy_Model extends CI_Model{
         if ($q->num_rows() > 0) {
             return $q->result_array();
         }
-
       
     }
 

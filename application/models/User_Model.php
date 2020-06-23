@@ -2,6 +2,7 @@
 class User_Model extends CI_Model{
     public function Signup($data)
     {
+        $this->db->select('UID,Name,Email,Role');
         $this->db->where('Email',$data['Email']);
         $q=$this->db->get('users');
         if($q->num_rows()>0){
@@ -11,9 +12,7 @@ class User_Model extends CI_Model{
             $q=$this->db->insert('users',$data);
             return $q;
         }
-        
     }
-
 
     // public function Signin($data)
     // {
