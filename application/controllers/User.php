@@ -82,9 +82,8 @@ class User extends CI_Controller
                 $q = $this->User_Model->Signup($dt); //model method returns a row of user
                 if ($q) // if the user is not null, it was added
                 {
-                    $this->session->set_flashdata('padd', 'User added successfully');
-                    $data['Content'] = 'Main/UserLogin';  //move to the login page now
-                    $this->load->view('SharedLayouts/Main', $data);
+                    // $this->session->set_flashdata('padd', 'User signed up successfully');
+                   redirect('User/SignIn');
                 } else {
                     redirect('User/Signup'); //reload the page if sign up failed controller/method
                 }

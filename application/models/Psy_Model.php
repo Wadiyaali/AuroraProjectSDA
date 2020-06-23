@@ -6,7 +6,7 @@ class Psy_Model extends CI_Model{
     {
         $this->db->select('Severity,Date,Time,Users.Name');
         $this->db->where('session.PID', $userID);
-        $this->db->join('Users', 'Users.UID=session.PID', 'left');
+        $this->db->join('Users', 'Users.UID=session.UID', 'left');
         $q = $this->db->get('session');
         if ($q->num_rows() > 0) {
             return $q->result_array();

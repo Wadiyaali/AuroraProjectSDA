@@ -3,8 +3,11 @@ class Article_Model extends CI_Model{
     public function addArticle($data)
     {
         $added=$this->db->insert('article',$data);
-        return $added->result_array();
-
+        if($added)
+        {
+        return $added;
+        }
+        
     }
     public function GetArticle()
     {
