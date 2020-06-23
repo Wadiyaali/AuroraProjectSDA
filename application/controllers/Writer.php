@@ -8,7 +8,7 @@ class Writer extends CI_Controller
         if (!$this->session->userdata('LoggedIn')) {
             redirect("User/SignIn");
         } else {
-            if ($this->session->userdata('Role') != "Writer") {
+            if ($this->session->userdata('Role') != "Writer"&&$this->session->userdata('Role') != "writer"){
                 show_error('You can\'t access the requested page', 403, '403');
                 die();
             }

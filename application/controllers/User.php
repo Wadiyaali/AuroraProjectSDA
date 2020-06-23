@@ -46,11 +46,11 @@ class User extends CI_Controller
 
     private function redirectToDashboard($role)
     {
-        if ($role == "Patient") {
+        if ($role == "Patient"||$role == "patient") {
             redirect("Patient/Index");
-        } else if ($role == "Writer") {
+        } else if ($role == "Writer"||$role == "writer") {
             redirect("Writer/Index");
-        } else if ($role == "Psychologist") {
+        } else if ($role == "Psychologist"||$role == "psychologist") {
             redirect("Psychologist/Index");
         }
     }
@@ -77,7 +77,7 @@ class User extends CI_Controller
                     'Name' => $name,
                     'Email' => $email,
                     'Password' => $pass,
-                    'Category' => $cat
+                    'Role' => $cat
                 );
                 $q = $this->User_Model->Signup($dt); //model method returns a row of user
                 if ($q) // if the user is not null, it was added

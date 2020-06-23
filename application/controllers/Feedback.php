@@ -4,20 +4,20 @@
 {
 
     public function Index(){
-        if($this->session->userdate('LoggedIn')==1)    
-        {  if (strcmp($this->session->userdata('Role'),"Patient")) 
+        if($this->session->userdata('LoggedIn')==1)    
+        {  if (strcmp($this->session->userdata('Role'),"Patient")||strcmp($this->session->userdata('Role'),"patient")) 
           {
               $data['Content'] = "Main/FeedbackPage";
               $data['Title'] = "Feedback";
               $this->load->view('SharedLayouts/DashboardPatient', $data);
           }
-          else if (strcmp($this->session->userdata('Role'),"Psychologist")) 
+          else if (strcmp($this->session->userdata('Role'),"Psychologist")||strcmp($this->session->userdata('Role'),"psychologist")) 
           {
               $data['Content'] = "Main/FeedbackPage";
               $data['Title'] = "Feedback";
               $this->load->view('SharedLayouts/DashboardPsychologist', $data);
           }
-          else if (strcmp($this->session->userdata('Role'),"Writer")) 
+          else if (strcmp($this->session->userdata('Role'),"Writer")||strcmp($this->session->userdata('Role'),"writer")) 
           {
               $data['Content'] = "Main/FeedbackPage";
               $data['Title'] = "Feedback";

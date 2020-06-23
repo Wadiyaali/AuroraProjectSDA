@@ -131,7 +131,7 @@
             <li>
               <div class="navList__subheading row row--align-v-center">
                 <span class="navList__subheading-icon"><i class="fas fa-briefcase-medical"></i></span>
-                <a style="color:white;" href="HomepagePatient.aspx"><span class="navList__subheading-title">Home</span></a>
+                <a style="color:white;" href="<?php echo site_url("Patient/Index"); ?>"><span class="navList__subheading-title">Home</span></a>
               </div>
 
             </li>

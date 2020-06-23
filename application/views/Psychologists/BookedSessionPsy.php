@@ -16,6 +16,7 @@
                 <tbody>
                     <?php $i=1; foreach ($Sessions as $Session) : ?>
                         <tr>
+                          
                             <td><?php echo $i; ?></td>
                             <td><?php echo $Session['Name']; ?></td>
                             <td><?php echo $Session['Severity']; ?></td>

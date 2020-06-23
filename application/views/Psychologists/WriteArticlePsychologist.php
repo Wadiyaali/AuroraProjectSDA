@@ -65,5 +65,12 @@
 
 <?php echo form_close(); ?> 
     </div>
-      
+    <?php if ($this->session->flashdata('createASuccess')) : ?>
+            <p class="alert alert-success"><?php echo $this->session->flashdata('createASuccess'); ?> </p>
+        <?php endif; ?>
+
+        <?php if ($this->session->flashdata('createAError')) : ?>
+            <p class="alert alert-danger"><?php echo $this->session->flashdata('createAError'); ?> </p>
+        <?php endif; ?>
+    
     </div></div>

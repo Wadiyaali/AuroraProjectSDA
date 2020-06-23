@@ -6,9 +6,9 @@ class Patient extends CI_Controller
     {
         parent::__construct();
         if (!$this->session->userdata('LoggedIn')) {
-            redirect("Account/SignIn");
+            redirect("User/SignIn");
         } else {
-            if ($this->session->userdata('Role') != "Patient") {
+            if (($this->session->userdata('Role') != "Patient")&&($this->session->userdata('Role') != "patient")) {
                 show_error('You can\'t access the requested page', 403, '403');
                 die();
             }

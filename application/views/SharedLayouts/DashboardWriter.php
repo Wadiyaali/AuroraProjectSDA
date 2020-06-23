@@ -48,7 +48,7 @@
         {
             var ans = window.confirm("By clicking OK you will be logged out");
             if (ans == true){
-                window.location.href ='Articles.aspx';
+                window.location.href ="<?php echo site_url("User/SignOut"); ?>";
             }
         };
     </script>
@@ -57,7 +57,7 @@
         {
             var ans = window.confirm("By clicking Ok you will be logged out");
             if (ans == true){
-                window.location.href ='Mainpage.aspx';
+              window.location.href ="<?php echo site_url("User/SignOut"); ?>";
             }
         };
     </script>
@@ -115,7 +115,7 @@
            <li>
           <div class="navList__subheading row row--align-v-center">
             <span class="navList__subheading-icon"><i class="fas fa-briefcase-medical"></i></span>
-       <a style="color:white;" href=""><span class="navList__subheading-title">Home</span></a>
+       <a style="color:white;" href="<?php echo site_url("Patient/Index"); ?>"><span class="navList__subheading-title">Home</span></a>
           </div>
          
         </li>

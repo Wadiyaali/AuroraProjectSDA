@@ -47,7 +47,7 @@
         'title'=>'Format: More than 8 Characters, atleast 1: Uppercase, LowerCase, Number',
         'name'=>'txtPassword',
         'Placeholder'=>'Enter Password',
-        'Pattern'=>'^(?=.*[A-Za-z])(?=.*\d).{8,}$'
+        
     );
     echo form_input($data);
     ?>
@@ -64,7 +64,7 @@
         'title'=>'Same as Password',
         'name'=>'txtCPassword',
         'Placeholder'=>'Re enter Password',
-        'Pattern'=>'^(?=.*[A-Za-z])(?=.*\d).{8,}$'
+       
     );
     echo form_input($data);
     ?>
@@ -76,9 +76,9 @@
      $data=array(
       
       'class'=>'form-control col-md-6 col-lg-6',
-      'id'=>'ddCategory',
+      'id'=>'Category',
       'title'=>'Select Category',
-      'name'=>'ddCategory',
+      'name'=>'Category',
       'style'=>'height:3em;background:transparent;font-size:1.2em;color:#ccc;'
       
   );
@@ -110,9 +110,6 @@ echo form_dropdown('Category', $options, 'writer',$data);
 
 <?php echo form_close(); ?>
       </div>
- 
- 
-  
   <div class="right">
       
    

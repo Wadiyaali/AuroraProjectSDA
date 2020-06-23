@@ -62,7 +62,7 @@
         {
             var ans = window.confirm("By clicking OK you will be logged out");
             if (ans == true){
-                window.location.href ='Mainpage.aspx';
+              window.location.href ="<?php echo site_url("User/SignOut"); ?>";
             }
         };
     </script>
@@ -119,7 +119,7 @@
            <li>
           <div class="navList__subheading row row--align-v-center">
             <span class="navList__subheading-icon"><i class="fas fa-briefcase-medical"></i></span>
-       <a style="color:white;" href="Homepagepsychologist.aspx">     <span class="navList__subheading-title">Home</span></a>
+       <a style="color:white;" href="<?php echo site_url("Patient/Index"); ?>">     <span class="navList__subheading-title">Home</span></a>
           </div>
          
         </li>
@@ -140,13 +140,13 @@
         <li>
           <div class="navList__subheading row row--align-v-center">
             <span class="navList__subheading-icon"><i class="fas fa-mountain"></i></span>
-            <span class="navList__subheading-title"><a href="BookedSessionPsycho.aspx" style="color:white;">Booked Sessions</a></span>
+            <span class="navList__subheading-title"><a href="<?php echo site_url("Psychologist/ShowSessions"); ?>" style="color:white;">Booked Sessions</a></span>
           </div>
             </li>
           <li>
           <div class="navList__subheading row row--align-v-center">
             <span class="navList__subheading-icon"><i class="fas fa-mountain"></i></span>
-               <span class="navList__subheading-title"><a href="Chat.aspx" style="color:white;">Chat</a></span>
+              
           </div>
             </li>
         <li class="navList__heading">Articles<i class="far fa-image"></i></li>
@@ -157,7 +157,7 @@
           </div>
           <ul class="subList subList--hidden">
         <li class="subList__item"><a href="#" style="color:white;" onclick="na()">Read Article</a></li>
-            <li class="subList__item"><a href="Writearticlepsychologist.aspx" style="color:white;">Write Article</a></li>
+            <li class="subList__item"><a href="<?php echo site_url("Psychologist/WriteArticle"); ?>" style="color:white;">Write Article</a></li>
           </ul>
         </li>
        

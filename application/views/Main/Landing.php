@@ -22,7 +22,7 @@
         <div class="button" style="width:30%;height:3em;font-size:1.3em; margin-left:0" id="button-7">
             <div id="dub-arrow">
                <p style="color:black;">Go</p>
-            </div>  <a href="#articles" runat="server">Learn More</a>
+            </div>  <a href="#articles"  >Learn More</a>
           
         </div>
     </div>
@@ -31,15 +31,19 @@
             <h1 class="mt-3 pb-3 mb-4 border-bottom text-center">
                 Article Section
             </h1>
-            <div class="row" id="articlerow" runat="server">
-                <div class="col-md-3" id="card1" runat="server">
+        
+
+            <div class="row" id="articlerow" >
+                <div class="col-md-3" id="card1" >
                     <div class="card">
                         <img class="card-img-top vimag" src="http://mymodernmet.com/wp/wp-content/uploads/2017/03/sonaksha-iyengar-anxiety-alaphabet-a.jpg" alt="Card image cap"/>
-                        <div class="card-body" id="card1body" runat="server">
-                            <h3 class="card-title border-bottom pb-3" id="card1title" runat="server"></h3>
-                            <p class="card-text" id="card1content" runat="server"></p>
-                            <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
+                        <div class="card-body" id="card1body"  >
+                        <?php $i=1; foreach ($articles as $article) : ?>
+                            <h3 class="card-title border-bottom pb-3" id="card1title" ><?php echo $article['title']; ?></h3>
+                            <p class="card-text" id="card1content"  > <?php echo  substr($article['Content'],0,90)."...."; ?></p>
+                     <?php $i++; endforeach; ?>         <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
                         </div>
+                      
                     </div>
                 </div>
 
@@ -47,8 +51,8 @@
                     <div class="card">
                         <img class="card-img-top vimag" src="https://i.pinimg.com/originals/b2/ee/de/b2eedec01c158e563692fee6c4d1a317.jpg" alt="Card image cap"/>
                         <div class="card-body">
-                            <h3 class="card-title border-bottom pb-3" id="cardt2" runat="server">Card title</h3>
-                            <p class="card-text" id="cardc2" runat="server">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h3 class="card-title border-bottom pb-3" id="cardt2"  >Card title</h3>
+                            <p class="card-text" id="cardc2"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
                         </div>
                     </div>
@@ -57,8 +61,8 @@
                     <div class="card">
                         <img class="card-img-top vimag" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnQ-t6sMqFlfWm4C1_5pzcbEAk5jTn2lKXCb3bJUj8QKxRUsv4&s" alt="Card image cap"/>
                         <div class="card-body">
-                            <h3 class="card-title border-bottom pb-3" id="cardt3" runat="server">Card title</h3>
-                            <p class="card-text" id="cardc3" runat="server">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h3 class="card-title border-bottom pb-3" id="cardt3"  >Card title</h3>
+                            <p class="card-text" id="cardc3"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
                         </div>
                     </div>
@@ -67,8 +71,8 @@
                     <div class="card">
                         <img class="card-img-top vimag" src="https://static.vecteezy.com/system/resources/previews/000/364/421/non_2x/vector-mental-health-illustration.jpg" alt="Image result for mental health illustration"/>
                         <div class="card-body">
-                            <h3 class="card-title border-bottom pb-3" id="cardt4" runat="server">Card title</h3>
-                            <p class="card-text" id="cardc4" runat="server">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h3 class="card-title border-bottom pb-3" id="cardt4"  >Card title</h3>
+                            <p class="card-text" id="cardc4"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
                         </div>
                     </div>

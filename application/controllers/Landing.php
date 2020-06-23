@@ -21,8 +21,20 @@ class Landing extends CI_Controller {
 	public function index()
 	{ 
 		//edited by Khadija
+		$this->load->model('Article_Model');
 		$data['Content']='Main/Landing';
-        $data['Title']='Aurora';
+		$data['Title']='Aurora';
+		$data['articles'] = $this->Article_Model->GetArticle(1);
 		$this->load->view('SharedLayouts/Main',$data);
 	}
+	public function ShowArticle()
+{
+	$this->load->model('Article_Model');
+    $data['Content'] = "Main/Article";
+    $data['Title'] = "Articles";
+    $data['articles'] = $this->Article_Model->GetArticle();
+    $this->load->view('SharedLayouts/Main', $data);
+}
+
+
 }

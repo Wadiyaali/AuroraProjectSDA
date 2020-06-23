@@ -61,7 +61,7 @@
 
             
             <a class="nonlink"></a>
-            <a class="et-hero-tab navbar-nav" href="Articles.aspx"><p>Articles</p></a>
+            <a class="et-hero-tab navbar-nav" href="<?php echo site_url("Landing/ShowArticle"); ?>"><p>Articles</p></a>
             <a class="et-hero-tab navbar-nav" href="Tests.aspx"><p>Test</p></a>
            
             <a class="nonlink navbar-text" href="<?php echo site_url("Landing/Index"); ?>" title="Home"><h1 style="font-size:5em">Aurora </h1></a><a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignIn"); ?>"><p>Log In</p></a>
