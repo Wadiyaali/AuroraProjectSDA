@@ -36,9 +36,10 @@
             <div class="row" id="articlerow" >
                 <div class="col-md-3" id="card1" >
                     <div class="card">
+                    <?php $i=1; foreach ($articles as $article) : ?>
                         <img class="card-img-top vimag" src="http://mymodernmet.com/wp/wp-content/uploads/2017/03/sonaksha-iyengar-anxiety-alaphabet-a.jpg" alt="Card image cap"/>
                         <div class="card-body" id="card1body"  >
-                        <?php $i=1; foreach ($articles as $article) : ?>
+                        
                             <h3 class="card-title border-bottom pb-3" id="card1title" ><?php echo $article['title']; ?></h3>
                             <p class="card-text" id="card1content"  > <?php echo  substr($article['Content'],0,90)."...."; ?></p>
                      <?php $i++; endforeach; ?>         <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
