@@ -38,7 +38,6 @@ public function ShowSessions()
             $data['Content'] = "Psychologists/WriteArticlePsychologist";
             $data['Title'] = "Wrong";           
             $this->load->view('SharedLayouts/DashboardPsychologist', $data);
-            
         } 
         else {
             $array = array(
@@ -46,7 +45,6 @@ public function ShowSessions()
                 'Name' => $this->input->post('txtArticleTitlePsy'),
                 'Content' => $this->input->post('txtArticleContentPsy'),
             );
-
             if ($this->Article_Model->addArticle($array) > 0) {
                 $this->session->set_flashdata('createASuccess', 'Your Article has been added!');
                 redirect("Psychologist/WriteArticle");
