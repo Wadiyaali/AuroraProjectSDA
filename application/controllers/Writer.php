@@ -36,7 +36,7 @@ class Writer extends CI_Controller
                 
             );
 
-            if ($this->Article_Model->addArticle($array) > 0) {
+            if ($this->Article_Model->addArticle($array)) {
                 $this->session->set_flashdata('createASuccess', 'Your Article has been added!');
                 redirect("Writer/WriteArticle");
             } else {

@@ -25,6 +25,7 @@ public function ShowSessions()
     $data['Content'] = "Psychologists/BookedSessionPsy";
     $data['Title'] = "My Session Bookings";
     $data['Sessions'] = $this->Psy_Model->viewSessions($this->session->userdata('UID'));
+    
     $this->load->view('SharedLayouts/DashboardPsychologist', $data);
 }
 
@@ -36,18 +37,21 @@ public function ShowSessions()
 
         if ($this->form_validation->run() == FALSE) {
             $data['Content'] = "Psychologists/WriteArticlePsychologist";
-            $data['Title'] = "Wrong";           
+            $data['Title'] = "Dashboard"; 
+                  
             $this->load->view('SharedLayouts/DashboardPsychologist', $data);
             
         } 
         else {
+              
             $array = array(
                 'UID' => $this->session->userdata('UID'),
                 'Name' => $this->input->post('txtArticleTitlePsy'),
                 'Content' => $this->input->post('txtArticleContentPsy'),
             );
-
-            if ($this->Article_Model->addArticle($array) > 0) {
+            print_r($array);
+            die();  
+            if ($this->Article_Model->addArticle($array)) {
                 $this->session->set_flashdata('createASuccess', 'Your Article has been added!');
                 redirect("Psychologist/WriteArticle");
             } else {

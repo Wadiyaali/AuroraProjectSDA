@@ -10,10 +10,10 @@
             <h5 class="text-center text-light text-dark"> *this page is dedicated to write articles for mental health. By publishing article you are agreeing to terms and 
                     condition of our page and your identity won't stay anonymous.
                 </h5>
-         
+               
+           
             <div class="content-wrap">
             <?php echo form_open(''); ?>
-           
                           
             <div class="form-group col-md-12 col-lg-12">
 					<p> <?php

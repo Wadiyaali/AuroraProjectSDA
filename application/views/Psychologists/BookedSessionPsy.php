@@ -1,6 +1,7 @@
 <div class="sess">
     <main role="main">
         <fieldset>
+            <?php if(!empty($Sessions)): ?>
             <?php echo form_open(''); ?>
             <h2 class="text-bold text-capitalize text-dark text-center">My booked sessions</h2>
             <table class="table">
@@ -14,17 +15,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i=1; foreach ($Sessions as $Session) : ?>
+                    <?php $i = 1;
+                    foreach ($Sessions as $Session) : ?>
                         <tr>
-                          
+
                             <td><?php echo $i; ?></td>
                             <td><?php echo $Session['Name']; ?></td>
                             <td><?php echo $Session['Severity']; ?></td>
                             <td><?php echo $Session['Date']; ?></td>
                             <td><?php echo $Session['Time']; ?></td>
                         </tr>
-                    <?php $i++; endforeach; ?>
+                    <?php $i++;
+                    endforeach; ?>
                 </tbody>
             </table>
+                <?php else: ?>
+                    <h1> No sessions found!</h1>
+                <?php endif;?>
+                </fieldset>
     </main>
 </div>

@@ -29,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function preventBack() { window.history.forward(1); }
         setTimeout("preventBack()", 0);
         window.onunload = function () { null };
@@ -45,7 +45,7 @@
      window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
      window.onunload = function() { void (0) }
  </script>
-   
+    -->
 </head>
 <body>
      <script>
@@ -157,7 +157,7 @@
           </div>
           <ul class="subList subList--hidden">
         <li class="subList__item"><a href="#" style="color:white;" onclick="na()">Read Article</a></li>
-            <li class="subList__item"><a href="<?php echo site_url("Psychologist/WriteArticle"); ?>" style="color:white;">Write Article</a></li>
+            <li class="subList__item"><a style="color:white;" href="<?php echo site_url("Psychologist/WriteArticle"); ?>" >Write Article</a></li>
           </ul>
         </li>
        
