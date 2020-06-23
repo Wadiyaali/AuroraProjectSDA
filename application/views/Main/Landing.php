@@ -42,7 +42,7 @@
                         
                             <h3 class="card-title border-bottom pb-3" id="card1title" ><?php echo $article['title']; ?></h3>
                             <p class="card-text" id="card1content"  > <?php echo  substr($article['Content'],0,90)."...."; ?></p>
-                     <?php $i++; endforeach; ?>         <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
+                     <?php $i++; endforeach; ?>         <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
                         </div>
                       
                     </div>
@@ -54,7 +54,7 @@
                         <div class="card-body">
                             <h3 class="card-title border-bottom pb-3" id="cardt2"  >Card title</h3>
                             <p class="card-text" id="cardc2"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
+                            <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
                         </div>
                     </div>
                     </div>
@@ -64,7 +64,7 @@
                         <div class="card-body">
                             <h3 class="card-title border-bottom pb-3" id="cardt3"  >Card title</h3>
                             <p class="card-text" id="cardc3"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
+                            <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         <div class="card-body">
                             <h3 class="card-title border-bottom pb-3" id="cardt4"  >Card title</h3>
                             <p class="card-text" id="cardc4"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="Articles.aspx" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
+                            <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
                         </div>
                     </div>
                 </div>
