@@ -44,13 +44,15 @@ public function ShowSessions()
         } 
         else {
               
+            $UID=$this->session->userdata('UID');
+            $title=$this->input->post('txtArticleTitlePsy');
+            $cont=$this->input->post('txtArticleContentPsy');
             $array = array(
-                'UID' => $this->session->userdata('UID'),
-                'Name' => $this->input->post('txtArticleTitlePsy'),
-                'Content' => $this->input->post('txtArticleContentPsy'),
+                'UID' => $UID,
+                'Name' => $title,
+                'Content' =>$cont,
             );
-            print_r($array);
-            die();  
+          
             if ($this->Article_Model->addArticle($array)) {
                 $this->session->set_flashdata('createASuccess', 'Your Article has been added!');
                 redirect("Psychologist/WriteArticle");

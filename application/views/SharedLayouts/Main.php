@@ -62,7 +62,7 @@
             
             <a class="nonlink"></a>
             <a class="et-hero-tab navbar-nav" href="<?php echo site_url("Landing/ShowArticle"); ?>"><p>Articles</p></a>
-            <a class="et-hero-tab navbar-nav" href="Tests.aspx"><p>Test</p></a>
+            <a class="et-hero-tab navbar-nav" href="#"><p>Test</p></a>
            
             <a class="nonlink navbar-text" href="<?php echo site_url("Landing/Index"); ?>" title="Home"><h1 style="font-size:5em">Aurora </h1></a><a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignIn"); ?>"><p>Log In</p></a>
             <a class="et-hero-tab navbar-nav" href="<?php echo site_url("User/SignUp"); ?>"><p>Sign up</p> </a>
@@ -90,7 +90,7 @@
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                            <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+                            <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by Team Aurora"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
                         </ul>
 
                     </div>

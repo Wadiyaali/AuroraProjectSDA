@@ -35,14 +35,16 @@
 
             <div class="row" id="articlerow" >
                 <div class="col-md-3" id="card1" >
+                
                     <div class="card">
-                    <?php $i=1; foreach ($articles as $article) : ?>
+                   
                         <img class="card-img-top vimag" src="http://mymodernmet.com/wp/wp-content/uploads/2017/03/sonaksha-iyengar-anxiety-alaphabet-a.jpg" alt="Card image cap"/>
                         <div class="card-body" id="card1body"  >
-                        
+                        <?php $i=1; foreach ($articles as $article) : ?>
+                      <?php if($i==1):?>
                             <h3 class="card-title border-bottom pb-3" id="card1title" ><?php echo $article['title']; ?></h3>
                             <p class="card-text" id="card1content"  > <?php echo  substr($article['Content'],0,90)."...."; ?></p>
-                     <?php $i++; endforeach; ?>         <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
+                      <?php endif; ?> <?php $i++; endforeach; ?>         <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
                         </div>
                       
                     </div>
@@ -52,30 +54,36 @@
                     <div class="card">
                         <img class="card-img-top vimag" src="https://i.pinimg.com/originals/b2/ee/de/b2eedec01c158e563692fee6c4d1a317.jpg" alt="Card image cap"/>
                         <div class="card-body">
-                            <h3 class="card-title border-bottom pb-3" id="cardt2"  >Card title</h3>
-                            <p class="card-text" id="cardc2"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
-                        </div>
+                        <?php $i=1; foreach ($articles as $article) : ?>
+                      <?php if($i==2):?>
+                            <h3 class="card-title border-bottom pb-3" id="card1title" ><?php echo $article['title']; ?></h3>
+                            <p class="card-text" id="card1content"  > <?php echo  substr($article['Content'],0,90)."...."; ?></p>
+                      <?php endif; ?> <?php $i++; endforeach; ?>         <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
+                       </div>
                     </div>
                     </div>
                 <div class="col-md-3">
                     <div class="card">
                         <img class="card-img-top vimag" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnQ-t6sMqFlfWm4C1_5pzcbEAk5jTn2lKXCb3bJUj8QKxRUsv4&s" alt="Card image cap"/>
                         <div class="card-body">
-                            <h3 class="card-title border-bottom pb-3" id="cardt3"  >Card title</h3>
-                            <p class="card-text" id="cardc3"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
-                        </div>
+                        <?php $i=1; foreach ($articles as $article) : ?>
+                      <?php if($i==3):?>
+                            <h3 class="card-title border-bottom pb-3" id="card1title" ><?php echo $article['title']; ?></h3>
+                            <p class="card-text" id="card1content"  > <?php echo  substr($article['Content'],0,90)."...."; ?></p>
+                      <?php endif; ?> <?php $i++; endforeach; ?>         <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
+                      </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card">
                         <img class="card-img-top vimag" src="https://static.vecteezy.com/system/resources/previews/000/364/421/non_2x/vector-mental-health-illustration.jpg" alt="Image result for mental health illustration"/>
                         <div class="card-body">
-                            <h3 class="card-title border-bottom pb-3" id="cardt4"  >Card title</h3>
-                            <p class="card-text" id="cardc4"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
-                        </div>
+                        <?php $i=1; foreach ($articles as $article) : ?>
+                      <?php if($i==4):?>
+                            <h3 class="card-title border-bottom pb-3" id="card1title" ><?php echo $article['title']; ?></h3>
+                            <p class="card-text" id="card1content"  > <?php echo  substr($article['Content'],0,90)."...."; ?></p>
+                      <?php endif; ?> <?php $i++; endforeach; ?>         <a href="<?php echo site_url("Landing/ShowArticle"); ?>" class="float-right"><p class="tealp">Read more <i class="fas fa-angle-double-right"></i></p></a>
+                       </div>
                     </div>
                 </div>
            
@@ -109,7 +117,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="serviceBox">
                         <div class="service-icon any">
-                            <span><img src="PikPng.com_anonymous-png_2959987.png" /></span>
+                            <span><img src="https://qph.fs.quoracdn.net/main-qimg-f04d70b1e6823b1c995a3b6ccd94470a" /></span>
                         </div>
                         <h3 class="title">Anonymity</h3>
                         <h3 class="title"> </h3>

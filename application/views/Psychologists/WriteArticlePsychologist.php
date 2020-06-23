@@ -13,7 +13,7 @@
                
            
             <div class="content-wrap">
-            <?php echo form_open(''); ?>
+            <?php echo form_open(); ?>
                           
             <div class="form-group col-md-12 col-lg-12">
 					<p> <?php

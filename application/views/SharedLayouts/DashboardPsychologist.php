@@ -66,7 +66,7 @@
             }
         };
     </script>
-    <form runat="server">
+   
     <div class="wrapper">
 <div class="grid">
   <header class="header">
@@ -228,7 +228,7 @@
     <p> <a class="footer__signature">Light beyond Darkness</a></p>
   </footer>
 </div>
-        </form>
+       
 </body>
 </html>
 <script>
